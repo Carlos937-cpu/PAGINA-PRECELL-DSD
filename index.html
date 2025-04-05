@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Página Protegida</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      width: 100%;
+      height: 100%;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background-image: url('https://images.unsplash.com/photo-1581091012184-7f3c2cfc95f2?auto=format&fit=crop&w=1050&q=80'); /* Substitua por imagem da página de vendas se quiser */
+      background-size: cover;
+      background-position: center;
+    }
+
+    .overlay {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: rgba(0, 0, 0, 0.88);
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+      z-index: 9999;
+    }
+
+    .security {
+      position: absolute;
+      top: 15px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(0, 255, 153, 0.12);
+      padding: 10px 20px;
+      border-radius: 20px;
+      font-size: 14px;
+      color: #00ffcc;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: bold;
+      border: 1px solid #00ffcc;
+    }
+
+    .security::before {
+      content: '🔒';
+      font-size: 16px;
+    }
+
+    .overlay h2 {
+      font-size: 26px;
+      margin-bottom: 10px;
+    }
+
+    .overlay p {
+      font-size: 16px;
+      max-width: 90%;
+      margin-bottom: 20px;
+    }
+
+    .buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      width: 100%;
+      max-width: 320px;
+    }
+
+    .buttons button {
+      background: linear-gradient(90deg, #00c46a, #00a9e0);
+      border: none;
+      color: white;
+      padding: 14px;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .buttons button:hover {
+      opacity: 0.9;
+    }
+
+    @media (min-width: 600px) {
+      .overlay h2 {
+        font-size: 28px;
+      }
+      .overlay p {
+        font-size: 18px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="overlay" id="cookieOverlay">
+    <div class="security">Página protegida e 100% segura</div>
+    <h2>Política de Cookies</h2>
+    <p>Este site utiliza cookies para garantir a melhor experiência possível. Selecione uma opção abaixo para continuar:</p>
+    <div class="buttons">
+      <button onclick="redirect()">Aceitar e continuar</button>
+      <button onclick="redirect()">Continuar mesmo assim</button>
+      <button onclick="redirect()">Fechar</button>
+    </div>
+  </div>
+
+  <script>
+    function redirect() {
+      window.location.href = "https://go.hotmart.com/L98708853F";
+    }
+  </script>
+
+</body>
+</html>
