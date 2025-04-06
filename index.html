@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-16556115162"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'AW-16556115162');
-</script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Página Protegida</title>
+  <title>Curso Desenhando Sem Dom</title>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16556115162"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-16556115162');
+  </script>
+
   <style>
     * {
       margin: 0;
@@ -27,7 +28,7 @@
     }
 
     body {
-      background-image: url('https://images.unsplash.com/photo-1581091012184-7f3c2cfc95f2?auto=format&fit=crop&w=1050&q=80'); /* Substitua por imagem da página de vendas se quiser */
+      background-image: url('https://images.unsplash.com/photo-1581091012184-7f3c2cfc95f2?auto=format&fit=crop&w=1050&q=80');
       background-size: cover;
       background-position: center;
     }
@@ -46,28 +47,6 @@
       text-align: center;
       padding: 20px;
       z-index: 9999;
-    }
-
-    .security {
-      position: absolute;
-      top: 15px;
-      left: 50%;
-      transform: translateX(-50%);
-      background: rgba(0, 255, 153, 0.12);
-      padding: 10px 20px;
-      border-radius: 20px;
-      font-size: 14px;
-      color: #00ffcc;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      font-weight: bold;
-      border: 1px solid #00ffcc;
-    }
-
-    .security::before {
-      content: '🔒';
-      font-size: 16px;
     }
 
     .overlay h2 {
@@ -118,19 +97,22 @@
 <body>
 
   <div class="overlay" id="cookieOverlay">
-    <div class="security">Página protegida e 100% segura</div>
-    <h2>Política de Cookies</h2>
-    <p>Este site utiliza cookies para garantir a melhor experiência possível. Selecione uma opção abaixo para continuar:</p>
+    <h2>Curso pago de desenho online</h2>
+    <p>Você está prestes a acessar a página oficial do curso <strong>Desenhando Sem Dom</strong>, um produto digital pago. Usamos cookies para melhorar sua experiência.</p>
+    <p>Deseja continuar para a página do curso?</p>
     <div class="buttons">
-      <button onclick="redirect()">Aceitar e continuar</button>
-      <button onclick="redirect()">Continuar mesmo assim</button>
-      <button onclick="redirect()">Fechar</button>
+      <button onclick="redirect()">Sim, quero conhecer o curso</button>
+      <button onclick="closeOverlay()">Não, obrigado</button>
     </div>
   </div>
 
   <script>
     function redirect() {
       window.location.href = "https://go.hotmart.com/L98708853F";
+    }
+
+    function closeOverlay() {
+      document.getElementById("cookieOverlay").style.display = "none";
     }
   </script>
 
